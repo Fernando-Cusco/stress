@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stress-deployment
+  namespace: default
+  labels:
+    app: dcash
+spec:
+  selector:
+    matchLabels:
+      app: dcash
+  template:
+    metadata:
+      labels:
+        app: dcash
+    spec:
+      containers:
+      - name: stress
+        image: fcusco96/test-jmeter:v2
