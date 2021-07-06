@@ -4,15 +4,15 @@ metadata:
   name: stress-deployment
   namespace: default
   labels:
-    app: dcash
+    app: test
 spec:
   selector:
     matchLabels:
-      app: dcash
+      app: test
   template:
     metadata:
       labels:
-        app: dcash
+        app: test
     spec:
       containers:
       - name: stress
